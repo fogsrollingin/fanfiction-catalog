@@ -55,3 +55,18 @@ input {
   outline: 2px solid #5050a0;
   outline-offset: 2px;
 }
+
+.request-button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 6px;
+    background: #4b6cb7;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.request-button:hover {
+    background: #3a5aa0;
+}
