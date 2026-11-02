@@ -5,6 +5,9 @@ body {
   padding: 2rem;
 }
 
+body p {
+  line-height: 1.6;}
+
 input {
   width: 100%;
   padding: 0.75rem;
