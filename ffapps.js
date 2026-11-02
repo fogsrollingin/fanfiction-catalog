@@ -57,7 +57,7 @@ async function loadBooks() {
 
         const author = document.createElement("p");
         author.className = "book-author";
-        author.textContent = book.author ? `By ${book.author}` : "";
+        author.textContent = book.authors ? `By ${book.authors}` : "";
         card.appendChild(author);
 
 const summary = document.createElement("p");
