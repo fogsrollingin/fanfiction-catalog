@@ -68,7 +68,7 @@ card.appendChild(titleRow);
         card.appendChild(author);
 
 const downloadUrl =
-  `https://www.ia2.neocities.org/fanfiction/${
+  `https://ia2.neocities.org/fanfiction/${
     encodeURIComponent(book.authors || "Unknown")
   }/${
     encodeURIComponent(book.title || "Untitled story")
