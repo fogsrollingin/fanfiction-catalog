@@ -69,8 +69,17 @@ const filtered = books
 const titleRow = document.createElement("div");
 titleRow.className = "title-row";
 
+const titleRow = document.createElement("div");
+titleRow.className = "title-row";
+
 const title = document.createElement("h2");
 title.textContent = book.title || "Untitled story";
+
+const tallyUrl =
+  `https://tally.so/r/1WXpvQ` +
+  `?fic_id=${encodeURIComponent(book.id || '')}` +
+  `&title=${encodeURIComponent(book.title || '')}` +
+  `&author=${encodeURIComponent(book.authors || '')}`;
 
 const requestButton = document.createElement("a");
 requestButton.href = tallyUrl;
@@ -82,19 +91,9 @@ requestButton.textContent = "Request EPUB";
 titleRow.appendChild(title);
 titleRow.appendChild(requestButton);
 
-        
-const tallyUrl =
-  `https://tally.so/r/1WXpvQ` +
-  `?fic_id=${encodeURIComponent(book.id || '')}` +
-  `&title=${encodeURIComponent(book.title || '')}` +
-  `&author=${encodeURIComponent(book.authors || '')}`;
-
-        
-titleRow.appendChild(title);
-
-
 card.appendChild(titleRow);
 
+        
 const author = document.createElement("p");
 author.className = "book-author";
 author.textContent = book.authors ? `By ${book.authors}` : "";
