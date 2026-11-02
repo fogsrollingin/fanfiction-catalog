@@ -42,7 +42,16 @@ const filtered = books
   })
   .slice(0, 200);
 
-      
+      const totalMatches = books.filter(book => {
+  if (exactTag) {
+    return getTags(book).some(
+      tag => tag.toLowerCase() === query
+    );
+  }
+
+  return JSON.stringify(book).toLowerCase().includes(query);
+}).length;
+
 
       if (filtered.length === 0) {
         const message = document.createElement("p");
