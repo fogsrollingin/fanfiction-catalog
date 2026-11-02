@@ -56,34 +56,38 @@ titleRow.className = "title-row";
 
 const title = document.createElement("h2");
 title.textContent = book.title || "Untitled story";
-card.appendChild(title);
+
+titleRow.appendChild(title);
+titleRow.appendChild(downloadButton);
+
+card.appendChild(titleRow);
         
         const author = document.createElement("p");
         author.className = "book-author";
         author.textContent = book.authors ? `By ${book.authors}` : "";
         card.appendChild(author);
+
 const downloadUrl =
   `https://www.ia2.neocities.org/fanfiction/${
     encodeURIComponent(book.authors || "Unknown")
   }/${
     encodeURIComponent(book.title || "Untitled story")
-  } (${
-    book.id
-  })/${
+  }%20(${book.id})/${
     encodeURIComponent(book.title || "Untitled story")
-  } - ${
+  }%20-%20${
     encodeURIComponent(book.authors || "Unknown")
   }.epub`;
 
 const downloadButton = document.createElement("a");
-
 downloadButton.href = downloadUrl;
 downloadButton.className = "request-button";
 downloadButton.textContent = "Download EPUB";
-
 downloadButton.target = "_blank";
 
 card.appendChild(downloadButton);
+
+
+        
         const summary = document.createElement("p");
 summary.className = "book-summary";
 
