@@ -60,12 +60,27 @@ async function loadBooks() {
         author.textContent = book.author ? `By ${book.author}` : "";
         card.appendChild(author);
 
-        const summary = document.createElement("p");
-        summary.className = "book-summary";
-        summary.textContent = book.summary || "No summary available.";
-        card.appendChild(summary);
+const summary = document.createElement("p");
+summary.className = "book-summary";
 
-        const tags = document.createElement("div");
+const summaryDocument = new DOMParser().parseFromString(
+  book.comments || "",
+  "text/html"
+);
+
+// Preserve paragraph breaks when converting the summary to plain text.
+summaryDocument.querySelectorAll("p").forEach(paragraph => {
+  paragraph.append("\n\n");
+});
+
+summaryDocument.querySelectorAll("br").forEach(lineBreak => {
+  lineBreak.replaceWith("\n");
+});
+
+summary.textContent =
+  summaryDocument.body.textContent.trim() || "No summary available.";
+
+card.appendChild(summary);        const tags = document.createElement("div");
         tags.className = "book-tags";
         tags.setAttribute("aria-label", "Story tags");
 
