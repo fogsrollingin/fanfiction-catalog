@@ -30,15 +30,19 @@ async function loadBooks() {
 
       const query = term.trim().toLowerCase();
 
-      const filtered = books.filter(book => {
-        if (exactTag) {
-          return getTags(book).some(
-            tag => tag.toLowerCase() === query
-          );
-        }
+const filtered = books
+  .filter(book => {
+    if (exactTag) {
+      return getTags(book).some(
+        tag => tag.toLowerCase() === query
+      );
+    }
 
-        return JSON.stringify(book).toLowerCase().includes(query);
-      });
+    return JSON.stringify(book).toLowerCase().includes(query);
+  })
+  .slice(0, 200);
+
+      
 
       if (filtered.length === 0) {
         const message = document.createElement("p");
