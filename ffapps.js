@@ -51,9 +51,39 @@ async function loadBooks() {
         const card = document.createElement("article");
         card.className = "book";
 
-        const title = document.createElement("h2");
-        title.textContent = book.title || "Untitled story";
-        card.appendChild(title);
+        const titleRow = document.createElement("div");
+titleRow.className = "title-row";
+
+const title = document.createElement("h2");
+title.textContent = book.title || "Untitled story";
+
+const subject = encodeURIComponent(
+  `Fic Request: ${book.title || "Untitled story"}`
+);
+
+const body = encodeURIComponent(
+`Hello,
+
+I'd like access to:
+
+Title: ${book.title || "Untitled story"}
+Author: ${book.authors || "Unknown"}
+
+Thanks!`
+);
+
+const requestLink =
+  `mailto:fogsrollingin@gmail.com?subject=${subject}&body=${body}`;
+
+const requestButton = document.createElement("a");
+requestButton.href = requestLink;
+requestButton.className = "request-button";
+requestButton.textContent = "Request EPUB";
+
+titleRow.appendChild(title);
+titleRow.appendChild(requestButton);
+
+card.appendChild(titleRow);
 
         const author = document.createElement("p");
         author.className = "book-author";
