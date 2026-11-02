@@ -60,6 +60,31 @@ async function loadBooks() {
         author.textContent = book.authors ? `By ${book.authors}` : "";
         card.appendChild(author);
 
+const subject = encodeURIComponent(
+  `Fic Request: ${book.title || "Untitled story"}`
+);
+
+const body = encodeURIComponent(
+`Hello,
+
+I'd like access to:
+
+Title: ${book.title || "Untitled story"}
+Author: ${book.authors || "Unknown"}
+
+Thanks!`
+);
+
+const requestLink =
+  `mailto:fogsrollingin@gmail.com?subject=${subject}&body=${body}`;
+
+const requestButton = document.createElement("a");
+requestButton.href = requestLink;
+requestButton.className = "request-button";
+requestButton.textContent = "Request EPUB";
+
+card.appendChild(requestButton);
+        
 const summary = document.createElement("p");
 summary.className = "book-summary";
 
