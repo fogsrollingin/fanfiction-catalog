@@ -30,17 +30,23 @@ async function loadBooks() {
 
       const query = term.trim().toLowerCase();
 
-const filtered = books
-  .filter(book => {
-    if (exactTag) {
-      return getTags(book).some(
-        tag => tag.toLowerCase() === query
-      );
-    }
+let filtered = books.filter(book => {
+  if (exactTag) {
+    return getTags(book).some(
+      tag => tag.toLowerCase() === query
+    );
+  }
 
-    return JSON.stringify(book).toLowerCase().includes(query);
-  })
-  .slice(0, 200);
+  return JSON.stringify(book).toLowerCase().includes(query);
+});
+
+// Only randomize when no search term is entered
+if (query === "") {
+  filtered = [...filtered]
+    .sort(() => Math.random() - 0.5);
+}
+
+filtered = filtered.slice(0, 200);
 
       const totalMatches = books.filter(book => {
   if (exactTag) {
