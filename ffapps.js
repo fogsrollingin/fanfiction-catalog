@@ -56,46 +56,35 @@ titleRow.className = "title-row";
 
 const title = document.createElement("h2");
 title.textContent = book.title || "Untitled story";
-
-const subject = encodeURIComponent(
-  `Fic Request: ${book.title || "Untitled story"}`
-);
-
-const title = document.createElement("h2");
-title.textContent = book.title || "Untitled story";
 card.appendChild(title);
         
         const author = document.createElement("p");
         author.className = "book-author";
         author.textContent = book.authors ? `By ${book.authors}` : "";
         card.appendChild(author);
+const downloadUrl =
+  `https://www.ia2.neocities.org/fanfiction/${
+    encodeURIComponent(book.authors || "Unknown")
+  }/${
+    encodeURIComponent(book.title || "Untitled story")
+  } (${
+    book.id
+  })/${
+    encodeURIComponent(book.title || "Untitled story")
+  } - ${
+    encodeURIComponent(book.authors || "Unknown")
+  }.epub`;
 
-const subject = encodeURIComponent(
-  `Fic Request: ${book.title || "Untitled story"}`
-);
+const downloadButton = document.createElement("a");
 
-const body = encodeURIComponent(
-`Hello,
+downloadButton.href = downloadUrl;
+downloadButton.className = "request-button";
+downloadButton.textContent = "Download EPUB";
 
-I'd like access to:
+downloadButton.target = "_blank";
 
-Title: ${book.title || "Untitled story"}
-Author: ${book.authors || "Unknown"}
-
-Thanks!`
-);
-
-const requestLink =
-  `mailto:fogsrollingin@gmail.com?subject=${subject}&body=${body}`;
-
-const requestButton = document.createElement("a");
-requestButton.href = requestLink;
-requestButton.className = "request-button";
-requestButton.textContent = "Request EPUB";
-
-card.appendChild(requestButton);
-        
-const summary = document.createElement("p");
+card.appendChild(downloadButton);
+        const summary = document.createElement("p");
 summary.className = "book-summary";
 
 const summaryDocument = new DOMParser().parseFromString(
