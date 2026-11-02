@@ -64,31 +64,34 @@ const filtered = books
         const card = document.createElement("article");
         card.className = "book";
 
-const downloadUrl =
-  `https://ia2.neocities.org/fanfiction/${
-    encodeURIComponent(book.authors || "Unknown")
-  }/${
-    encodeURIComponent(book.title || "Untitled story")
-  }%20(${book.id})/${
-    encodeURIComponent(book.title || "Untitled story")
-  }%20-%20${
-    encodeURIComponent(book.authors || "Unknown")
-  }.epub`;
-        
-const downloadButton = document.createElement("a");
-downloadButton.href = downloadUrl;
-downloadButton.className = "request-button";
-downloadButton.textContent = "Download EPUB";
-downloadButton.target = "_blank";
 
+        
 const titleRow = document.createElement("div");
 titleRow.className = "title-row";
 
 const title = document.createElement("h2");
 title.textContent = book.title || "Untitled story";
 
+const requestButton = document.createElement("a");
+requestButton.href = tallyUrl;
+requestButton.target = "_blank";
+requestButton.rel = "noopener noreferrer";
+requestButton.className = "request-btn";
+requestButton.textContent = "Request EPUB";
+
 titleRow.appendChild(title);
-titleRow.appendChild(downloadButton);
+titleRow.appendChild(requestButton);
+
+        
+const tallyUrl =
+  `https://tally.so/r/1WXpvQ` +
+  `?fic_id=${encodeURIComponent(book.id || '')}` +
+  `&title=${encodeURIComponent(book.title || '')}` +
+  `&author=${encodeURIComponent(book.authors || '')}`;
+
+        
+titleRow.appendChild(title);
+
 
 card.appendChild(titleRow);
 
