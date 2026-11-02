@@ -70,3 +70,10 @@ input {
 .request-button:hover {
     background: #3a5aa0;
 }
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
