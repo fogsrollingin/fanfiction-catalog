@@ -64,11 +64,6 @@ const filtered = books
         const card = document.createElement("article");
         card.className = "book";
 
-
-        
-const titleRow = document.createElement("div");
-titleRow.className = "title-row";
-
 const titleRow = document.createElement("div");
 titleRow.className = "title-row";
 
