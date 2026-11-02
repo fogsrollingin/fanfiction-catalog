@@ -51,22 +51,6 @@ async function loadBooks() {
         const card = document.createElement("article");
         card.className = "book";
 
-        const titleRow = document.createElement("div");
-titleRow.className = "title-row";
-
-const title = document.createElement("h2");
-title.textContent = book.title || "Untitled story";
-
-titleRow.appendChild(title);
-titleRow.appendChild(downloadButton);
-
-card.appendChild(titleRow);
-        
-        const author = document.createElement("p");
-        author.className = "book-author";
-        author.textContent = book.authors ? `By ${book.authors}` : "";
-        card.appendChild(author);
-
 const downloadUrl =
   `https://ia2.neocities.org/fanfiction/${
     encodeURIComponent(book.authors || "Unknown")
@@ -84,7 +68,21 @@ downloadButton.className = "request-button";
 downloadButton.textContent = "Download EPUB";
 downloadButton.target = "_blank";
 
-card.appendChild(downloadButton);
+const titleRow = document.createElement("div");
+titleRow.className = "title-row";
+
+const title = document.createElement("h2");
+title.textContent = book.title || "Untitled story";
+
+titleRow.appendChild(title);
+titleRow.appendChild(downloadButton);
+
+card.appendChild(titleRow);
+
+const author = document.createElement("p");
+author.className = "book-author";
+author.textContent = book.authors ? `By ${book.authors}` : "";
+card.appendChild(author);
 
 
         
