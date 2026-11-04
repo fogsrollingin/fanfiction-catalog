@@ -10,7 +10,7 @@ The goal here would be to create a *decentralized* archive: we only release fic 
 
 TLDR: This project is not about uploading anything onto the open internet.
 
-Contributor requirements: [Calibre](https://calibre-ebook.com/). Create a [tally.so](https://tally.so) form for requesters. Export your calibre catalog as a .json file and email me the tally link and .json <3
+Contributor requirements: [Calibre](https://calibre-ebook.com/). Create a [tally.so](https://tally.so) form for requesters. Export your calibre catalog as a .json file and email me the tally link and .json
 
 ## Additional Resources:
 
