@@ -1,6 +1,6 @@
 # Fic Archive Catalog
 
-When you request the epub, I'll review and send you the epub from fogsrollingin@gmail.com 
+When you request the epub, I'll review and send you the epub from fogsrollingin@gmail.com. Please feel free to send me feedback about this repo via email there too if you’d like.
 
 AO3 we love & miss you <3
 
