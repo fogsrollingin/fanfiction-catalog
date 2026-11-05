@@ -10,7 +10,20 @@ The goal here would be to create a *decentralized* archive: we only release fic 
 
 TLDR: This project is not about uploading anything onto the open internet.
 
-Contributor requirements: [Calibre](https://calibre-ebook.com/). Create a [tally.so](https://tally.so) form for requesters. Export your calibre catalog as a .json file and email me the tally link and .json
+Contributor requirements: 
+* Need to be using [Calibre](https://calibre-ebook.com/).
+* Export your catalog as a .json file. For Linux it's
+'''calibredb list \
+    --with-library "/path/to/Calibre Library" \
+    --fields all \
+    --for-machine \
+    > library.json'''
+  
+For Windows Powershell it's
+
+'''& "C:\Program Files\Calibre2\calibredb.exe" list --with-library "C:\Users\YOURNAME\Calibre Library" --fields all --for-machine | Set-Content -Encoding UTF8 "$env:USERPROFILE\Desktop\library.json"'''
+  
+* Create a [tally.so](https://tally.so) form for requesters. Export your calibre catalog as a .json file and email me the tally link and .json
 
 ## Additional Resources:
 
