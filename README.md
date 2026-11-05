@@ -6,12 +6,11 @@ AO3 we love & miss you <3
 
 ## Looking for Contributors
 
-The goal here would be to create a *decentralized* archive: we only release fic metadata for the catalog; sharing is still peer to peer via email. 
+Feel free to fork this project and put your own calibre catalog up for fic readers to request via email. But also, if you'd like to contribute to this one, the goal would be to create a *decentralized* archive: we only release fic metadata for the catalog; sharing is still peer to peer via email. 
 
 TLDR: This project is not about uploading anything onto the open internet.
 
 ### Contributor Steps: 
-Feel free to fork this project and put your own catalog up for fic readers to request via email. But also, if you'd like to contribute to this one:
 
 Need to be using [Calibre](https://calibre-ebook.com/).
 
