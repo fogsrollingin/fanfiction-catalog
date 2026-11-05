@@ -24,7 +24,8 @@ Export your catalog as a .json file. For Linux it's:
   
 For Windows Powershell it's:
 
-```& "C:\Program Files\Calibre2\calibredb.exe" list --with-library "C:\Users\YOURNAME\Calibre Library" --fields all --for-machine | Set-Content -Encoding UTF8 "$env:USERPROFILE\Desktop\library.json"
+```
+& "C:\Program Files\Calibre2\calibredb.exe" list --with-library "C:\Users\YOURNAME\Calibre Library" --fields all --for-machine | Set-Content -Encoding UTF8 "$env:USERPROFILE\Desktop\library.json"
   ```
 Create a [tally.so](https://tally.so) form for requesters. 
 
