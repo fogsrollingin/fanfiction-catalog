@@ -11,6 +11,8 @@ The goal here would be to create a *decentralized* archive: we only release fic 
 TLDR: This project is not about uploading anything onto the open internet.
 
 ### Contributor Steps: 
+Feel free to fork this project and put your own catalog up for fic readers to request via email. But also, if you'd like to contribute to this one:
+
 Need to be using [Calibre](https://calibre-ebook.com/).
 
 Export your catalog as a .json file. For Linux it's:
