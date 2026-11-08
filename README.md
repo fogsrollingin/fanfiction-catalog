@@ -47,3 +47,5 @@ https://www.reddit.com/r/FanFiction/s/w42vTpLre9 - AO3 alternatives
 https://adult-fanfiction.org/
 
 https://ficdex.org/
+
+https://ficshelf.ficshelf-reader.workers.dev/ - to help with 'reading' fics stored on Google Drives
