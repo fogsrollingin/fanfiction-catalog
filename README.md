@@ -1,8 +1,10 @@
 # Fic Archive Catalog
 
-When you request the epub, I'll review and send you the epub from fogsrollingin@gmail.com. Please feel free to send me feedback about this repo via email there too if you’d like.
+When you request the epub, I'll review and send you the epub from fogsrollingin@gmail.com. Please feel free to send me feedback about this repo via email there too if you’d like.  
 
 AO3 we love & miss you <3
+
+I privatized this repo when AO3 came back online but 11.19.2026 AO3 went down again so the catalog’s back up.
 
 ## Looking for Contributors
 
